@@ -1,0 +1,4 @@
+.mainBox{
+    @include dim(100%,100%);
+    background-color:$mainBack;
+}

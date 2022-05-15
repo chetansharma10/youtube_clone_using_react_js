@@ -1,0 +1,114 @@
+.common-btn{
+    border:none;
+    outline:none;
+    width:35px;
+    height:35px;
+    background-color:transparent;
+    border-radius: 50%;
+    &:hover{
+        background-color:$mainBack;
+    border:1px solid $mainBack;
+
+    }
+}
+.navBar{
+    @include flex(row,space-between,center);
+    @include dim(95%,55px);
+    background-color:$transBack;
+    padding:10px;
+    position:fixed;
+    top:0px;
+    z-index: 21;
+    // border: 1px solid red; 
+
+
+    .logo{
+        @include dim(auto,100%);
+        @include flex(row,none,center);
+        object{
+            @include dim(35px,35px);
+        }
+        p{
+            font-weight: bolder;
+            font-size: 1.5rem;
+            color: $text-color;
+            font-family: 'Pathway Gothic One', sans-serif;
+        }
+    }
+    .search{
+        @include flex(row,space-evenly,center);
+        @include dim(auto,auto);
+
+        .inputContainer{
+            margin-right: 5px;
+            @include dim(auto,auto);
+            @include flex(row,center,center);
+            border:1px solid lightgray;
+
+            input{
+                @include dim(400px,35px);
+                padding-left: 10px;
+                border:none;
+                outline:none;
+                font-size: 0.9rem;
+                @media screen and (max-width:768px) {
+                    width:auto;
+                }
+            }
+            button{
+                @include dim(60px,35px);
+                border-radius: 0px;
+                border:none;
+                outline:none;
+                opacity:0.8;
+                cursor: pointer;
+                &:hover{
+                    opacity:1;
+                }
+            }
+
+       
+            @media screen and (max-width:560px) {
+                display:none;
+            }
+        }
+
+        .voiceBtn{
+            border-radius: 100%;
+            border:none;
+            outline:none;
+            opacity:0.8;
+            cursor: pointer;
+            &:hover{
+                opacity:1;
+            }
+            @include dim(38px,35px);
+            background-color: rgba(211, 211, 211, 0.205);
+            @media screen and (max-width:560px) {
+                display:none;
+            }
+        }
+
+    }
+    .extras{
+        @include dim(auto,auto);
+        margin-right:50px;
+        // border: 1px solid red; 
+        @include flex(row,space-evenly,center);
+        button{
+            @extend .common-btn;
+            color: $text-color;
+            opacity:0.8;
+            cursor: pointer;
+            &:hover{
+                opacity:1;
+            }
+            margin-right: 20px;
+        }
+    }
+}
+
+.loginBtn
+{
+    display: none !important;
+}

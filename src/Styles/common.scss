@@ -1,0 +1,17 @@
+$text-color:#212121;
+$backColor:white;
+$mainBack:#F9F9F9;
+$transBack:rgba(255, 255, 255, 0.952);
+
+@mixin  flex($dir,$jc,$ai) {
+    display:flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin dim($w,$h) {
+    width:$w;
+    height:$h;
+}
+

@@ -1,0 +1,173 @@
+.searchBox{
+    @include dim(100%,auto);
+    @include flex(row,flex-start,none);
+    font-family: sans-serif;
+    background-color:$mainBack;
+    padding:10px;
+
+    .leftPlayer{
+        @include dim(70%,auto);
+        padding:10px;
+
+        iframe{
+            @include dim(100%,500px);
+            background-color:$mainBack;
+            outline:none;
+            border:none;
+        }
+        .details{
+            @include dim(100%,auto);
+            
+            h3{
+                padding:5px;
+                font-weight: 400;
+            }
+
+            .vws{
+                @include dim(100%,auto);
+                border-bottom:1px solid rgba(128, 128, 128, 0.493);
+                padding:5px;
+                @include flex(row,space-between,center);
+
+                p{
+                    color:gray;
+                }
+                .buttons{
+                    @include flex(row,space-between,center);
+
+                    button{
+                        padding:2px;
+                        width:auto;
+                        border:none;
+                        outline:none;
+                        margin-right: 10px;
+                        background-color: transparent;
+                        @include flex(row,space-between,center);
+                        span{
+                            margin-left: 5px;
+                            font-size: 1rem;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+
+            .channel{
+                @include dim(100%,auto);
+                @include flex(row,space-between,center);
+                padding:5px;
+                .cen{
+                    @include dim(auto,auto);
+                    @include flex(row,flex-start,center);
+                    img{
+                        border-radius: 100%;
+                        width:50px;
+                        height:50px;
+                    }
+                    div{
+                        margin-left: 10px;
+                        @include flex(column,flex-start,flex-start);
+                        p{
+                            font-size: 0.8rem;
+                            color: rgb(87, 87, 87);
+                        }
+                    }
+                }
+
+                button{
+                    border:none;
+                    outline:none;
+                    @include dim(120px,30px);
+                    @include flex(row,center,center);
+                    background-color:#CD3927;
+                    color:$backColor;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                    font-size: 1rem;
+                    padding:20px;
+                }
+
+
+            }
+        }
+    }
+
+    .videoItems{
+        @include dim(auto,auto);
+        padding:5px;
+        // border:1px solid red;
+
+    }
+
+
+
+    @media screen and (max-width:1000px) {
+        @include flex(column,center,none);
+        .leftPlayer{
+            width:90%;
+        }
+        .videoItems{
+            width:90%;
+
+        }
+    }
+}
+
+.hideSome{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    font-size: 0.9rem;
+
+}
+
+.showAll{
+    overflow: none;
+    text-overflow: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 0; /* number of lines to show */
+            line-clamp: 0;
+    -webkit-box-orient: vertical;
+    font-size: 0.9rem;
+}
+.btmDesc{
+    small{
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: rgb(109, 109, 109);
+        cursor: pointer;
+        font-size:0.8rem;
+    }
+}
+
+.comments{
+    border-top: 1px solid lightgray;
+    padding:10px;
+
+}
+
+.commentBox{
+     @include dim(100%,auto);
+     @include flex(row,space-between,center);
+     img{
+        border-radius: 100%;
+        width:40px;
+        height:40px;
+
+     }
+
+     .commentDesc{
+        padding: 15px;
+        @include dim(100%,auto);
+        @include flex(column,center,none);
+        p:first-child{
+        font-weight: bolder;
+        font-size:0.7rem;
+        }
+
+     }
+}

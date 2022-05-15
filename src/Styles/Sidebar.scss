@@ -1,0 +1,82 @@
+.common-btn{
+    border:none;
+    outline:none;
+    background-color:transparent;
+}
+
+.logo-btn{
+    @include dim(100%,auto);
+    @include flex(row,flex-start,center);
+    margin-top:5px;
+
+    button{
+        padding:0px;
+        margin:0px 10px 10px 10px;
+       
+    }
+    .logo{
+        @include dim(auto,100%);
+        @include flex(row,none,center);
+        object{
+            @include dim(35px,35px);
+        }
+        p{
+            font-weight: bolder;
+            font-size: 1.5rem;
+            color: $text-color;
+            font-family: 'Pathway Gothic One', sans-serif;
+        }
+    }
+
+
+}
+
+
+.sideBar{
+    @include flex(column,flex-start,center);
+    background-color:$backColor;
+    @include dim(80px,100%);
+
+    button{
+        margin-top: 12px;
+
+        @extend.common-btn;
+        opacity: 0.8;
+        cursor: pointer;
+        &:hover{
+            opacity:1;
+        }
+    }
+
+    .icons{
+        @include dim(100%,auto);
+        @include flex(column,center,center);
+        margin-top: 10px;
+        .icon{
+            @include dim(100%,auto);
+            @include flex(column,center,center);
+            a{
+            padding:20px 0px 20px 0px;
+
+                @include dim(100%,auto);
+                color:$text-color !important;
+                font-family: sans-serif;
+                @include flex(column,center,center);
+
+                text-decoration: none;
+                svg{
+                    @include dim(25px,25px);
+                }
+                p{
+                    padding-top: 3px;
+                    font-size: 0.6rem;
+                }
+                &:hover{
+
+                    background-color:#d3d3d346;
+                }
+            }
+           
+        }
+    }
+}

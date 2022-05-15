@@ -1,0 +1,46 @@
+.sideItem{
+    @include dim(100%,auto);
+    // border:1px solid red;
+    @include flex(row,flex-start,flex-start);
+    cursor: pointer;
+    &:hover{
+        background-color:rgba(211, 211, 211, 0.116);
+        transform:scale(1.05);
+        transition: 0.5s ease;
+        box-shadow: -8px 7px 14px 0px #f3f3f3;
+    }
+    margin-top: 10px;
+    // border:1px solid red;
+    img{
+        @include dim(180px,100px);
+    }
+
+    .sideDesc{
+        @include dim(200px,100%);
+
+        padding:5px;
+        @include flex(column,none,none);
+        h5{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+        small{
+            font-size: 0.7rem;
+            padding-top: 10px;
+            color:gray;
+            font-weight: bolder;
+
+        }
+    }
+
+    @media screen and (max-width:1000px){
+        .sideDesc{
+            width:80%;
+            margin-left: 5px;
+        }
+    }
+}

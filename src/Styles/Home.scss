@@ -1,0 +1,53 @@
+.homeContainer{
+    @include dim(100%,auto);
+    min-height: 100vh;
+    max-height: auto;
+    // border:1px solid red;
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    grid-auto-rows: repeat(4,auto);
+    row-gap:20px;
+    justify-items:stretch;
+    align-items: stretch;
+    padding:12px;
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    .loader{
+
+        position:absolute;
+        @include dim(100%,auto);
+        font-family: sans-serif;
+        @include flex(column,center,center);
+        img{
+            transform:scale(0.4);
+            margin-right: 80px;
+        
+        }
+
+        h5{
+            opacity:0.6;
+        }
+    }
+    
+    @media screen and (max-width:1200px){
+        grid-template-columns: repeat(3,auto);
+
+        
+    }
+    @media screen and (max-width:1015px){
+        grid-template-columns: repeat(2,auto);
+
+    }
+
+    @media screen and (max-width:735px){
+        grid-template-columns: repeat(1,350px);
+        // justify-content: center;
+        justify-items: center;
+
+    }
+}
+.ends{
+    width:100%;
+    position:absolute;
+}
